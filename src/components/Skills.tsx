@@ -1,23 +1,34 @@
+import { 
+  Code2, 
+  Palette, 
+  Server, 
+  Zap, 
+  Database, 
+  GitBranch, 
+  Flame 
+} from "lucide-react";
 
 export const Skills = () => {
   const skills = [
-    { name: "React", icon: "⚛️" },
-    { name: "Tailwind CSS", icon: "🎨" },
-    { name: "Node.js", icon: "🟢" },
-    { name: "Express", icon: "🚀" },
-    { name: "MongoDB", icon: "🍃" },
-    { name: "Git", icon: "🔄" },
-    { name: "Firebase", icon: "🔥" },
+    { name: "React", icon: Code2 },
+    { name: "Tailwind CSS", icon: Palette },
+    { name: "Node.js", icon: Server },
+    { name: "Express", icon: Zap },
+    { name: "MongoDB", icon: Database },
+    { name: "Git", icon: GitBranch },
+    { name: "Firebase", icon: Flame },
   ];
 
   const SkillIcon = ({ skill }: { skill: any }) => {
+    const IconComponent = skill.icon;
+    
     return (
       <div className="group flex flex-col items-center p-6 backdrop-blur-sm bg-white/5 rounded-2xl border border-white/10 shadow-2xl hover:scale-110 transition-all duration-300 hover:bg-white/10">
         <div 
-          className="text-5xl mb-4 group-hover:scale-125 transition-transform duration-300"
-          style={{ filter: 'drop-shadow(0 0 10px rgba(255, 255, 255, 0.3))' }}
+          className="text-5xl mb-4 group-hover:scale-125 transition-transform duration-300 text-cyan-400"
+          style={{ filter: 'drop-shadow(0 0 10px rgba(34, 211, 238, 0.5))' }}
         >
-          {skill.icon}
+          <IconComponent size={48} />
         </div>
         <h3 className="text-white font-bold text-lg text-center">{skill.name}</h3>
       </div>

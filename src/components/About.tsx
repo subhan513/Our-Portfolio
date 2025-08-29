@@ -41,7 +41,7 @@ export const About = () => {
 
               <div className="grid grid-cols-2 gap-6 mt-8">
                 <div className="text-center backdrop-blur-sm bg-white/10 rounded-lg p-4">
-                  <div className="text-3xl font-bold text-zed-orange mb-2 drop-shadow-lg">10+</div>
+                  <div className="text-3xl font-bold text-zed-orange mb-2 drop-shadow-lg">5+</div>
                   <div className="text-white/80">Projects Completed</div>
                 </div>
                 <div className="text-center backdrop-blur-sm bg-white/10 rounded-lg p-4">
@@ -49,11 +49,11 @@ export const About = () => {
                   <div className="text-white/80">Years Experience</div>
                 </div>
                 <div className="text-center backdrop-blur-sm bg-white/10 rounded-lg p-4">
-                  <div className="text-3xl font-bold text-zed-orange mb-2 drop-shadow-lg">5+</div>
+                  <div className="text-3xl font-bold text-zed-orange mb-2 drop-shadow-lg">1+</div>
                   <div className="text-white/80">Happy Clients</div>
                 </div>
                 <div className="text-center backdrop-blur-sm bg-white/10 rounded-lg p-4">
-                  <div className="text-3xl font-bold text-zed-blue mb-2 drop-shadow-lg">15+</div>
+                  <div className="text-3xl font-bold text-zed-blue mb-2 drop-shadow-lg">6+</div>
                   <div className="text-white/80">Technologies</div>
                 </div>
               </div>
@@ -71,16 +71,16 @@ export const About = () => {
                       className="w-full h-full object-cover"
                     />
                   </div>
-                  <p className="text-white/90 text-sm font-semibold">Professional Developer</p>
+                  <p className="text-white/90 text-sm font-semibold">MernStack Developer</p>
                 </div>
               </div>
               
               {/* Floating elements */}
               <div className="absolute -top-4 -right-4 w-16 h-16 bg-gradient-to-r from-zed-blue to-zed-orange rounded-full flex items-center justify-center animate-bounce shadow-lg">
-                <span className="text-white font-bold text-sm">React</span>
+                <span className="text-white font-bold text-sm">Reactjs</span>
               </div>
               <div className="absolute -bottom-4 -left-4 w-12 h-12 bg-gradient-to-r from-zed-orange to-zed-blue rounded-full flex items-center justify-center animate-bounce shadow-lg" style={{ animationDelay: '0.5s' }}>
-                <span className="text-white text-sm font-bold">JS</span>
+                <span className="text-white text-sm font-bold">Nodejs</span>
               </div>
             </div>
           </div>

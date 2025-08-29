@@ -11,9 +11,7 @@ export const Footer = () => {
 
   const services = [
     "Web Development",
-    "Mobile Apps",
     "Backend Development",
-    "Cloud Solutions"
   ];
 
   return (
@@ -36,9 +34,9 @@ export const Footer = () => {
               <a href="#" className="text-slate-400 hover:text-cyan-400 transition-colors">
                 <Linkedin size={20} />
               </a>
-              <a href="#" className="text-slate-400 hover:text-cyan-400 transition-colors">
+              {/* <a href="#" className="text-slate-400 hover:text-cyan-400 transition-colors">
                 <Twitter size={20} />
-              </a>
+              </a> */}
             </div>
           </div>
 
@@ -81,7 +79,7 @@ export const Footer = () => {
               </div>
               <div className="flex items-center text-slate-400">
                 <Phone size={16} className="mr-3" />
-                <span>+92 123 456 7890</span>
+                <span>+92 3288101603</span>
               </div>
               <div className="flex items-center text-slate-400">
                 <MapPin size={16} className="mr-3" />

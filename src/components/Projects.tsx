@@ -1,6 +1,6 @@
 
 import { Card } from '@/components/ui/card';
-import { ExternalLink, Youtube, ChevronLeft, ChevronRight } from 'lucide-react';
+import { ExternalLink, Youtube, ChevronLeft, ChevronRight, Github } from 'lucide-react';
 import { FaGlobe, FaYoutube, FaReact, FaNodeJs, FaDatabase, FaJs, FaCss3Alt, FaHtml5, FaFigma, FaUnity, FaCamera } from 'react-icons/fa';
 import { SiTypescript, SiTailwindcss, SiMongodb, SiFirebase, SiFlutter, SiNextdotjs, SiRedux, SiReactquery, SiClerk, SiSupabase, SiStripe, SiVercel, SiNetlify, SiAmazon, SiSharp, SiAppwrite } from 'react-icons/si';
 import { useState, useRef } from 'react';
@@ -110,13 +110,22 @@ export const Projects = () => {
   };
 
   const projects = [
-    {
+     {
       title: "Real Time Chat Application",
       category: "Chat Application",
       description: "A real-time chat application built with React, Node.js, and Socket.io, allowing users to chat with each other in real-time. Features include user authentication, room creation, and message history.",
       image: "/lovable-uploads/chatApp.png",
       technologies: ["React", "Node.js", "Socket.io", "Responsive Design", "Real-time Updates"],
+      githubUrl: "https://github.com/subhan513/news-app"
     },
+          {
+       title: " FullStack Recipe Finder App",
+       category: "Recipe Finder App",
+       description: "A comprehensive recipe discovery app that helps users find, save, and create delicious recipes. Features include recipe search, ingredient filtering and personalized recipe recommendations.",
+       image: "/lovable-uploads/mobile.png",
+       technologies: ["React Native", "Node.js", "Express API", "Responsive Design", "neonDB"],
+       githubUrl: "https://github.com/subhan513/news-app"
+     },
     {
       title: "NewsMonkey - Top General Headlines",
       category: "News Platform",
@@ -124,6 +133,7 @@ export const Projects = () => {
       image: "/lovable-uploads/efc34539-41a6-4d8b-9720-90395f2f231b.png",
       technologies: ["React", "News API", "Responsive Design", "Real-time Updates"],
       websiteUrl: "https://newsapp-three-jet.vercel.app/",
+      githubUrl: "https://github.com/subhan513/newsapp"
     },
     {
       title: "Educational Institution Website",
@@ -132,6 +142,7 @@ export const Projects = () => {
       image: "/lovable-uploads/6c0347b2-15cf-414d-962f-8b9ba9a86da8.png",
       technologies: ["React", "TailwindCSS", "CMS", "Responsive Design"],
       websiteUrl: "https://sharifeducaitonalcomplex.vercel.app/",
+      githubUrl: "https://github.com/subhan513/Sharif-Complex"
     },
     {
       title: "QuickCart - Experience Pure Sound",
@@ -140,6 +151,7 @@ export const Projects = () => {
       image: "/lovable-uploads/d83422aa-e68c-46fa-b366-9e95ca81f7a2.png",
       technologies: ["React", "Nodejs", "Commerce", "MongoDB", "Express"],
       websiteUrl: "https://e-commerce-store-rho-three.vercel.app/",
+      githubUrl: "https://github.com/subhan513/ecommerce-store"
     },
     {
       title: "Movie Entertainment Platform",
@@ -148,6 +160,7 @@ export const Projects = () => {
       image: "/lovable-uploads/7e5f0ea2-1a8a-4132-bc7b-a18630cef7fc.png",
       technologies: ["React", "API Integration", "Appwrite", "TailwindCSS"],
       websiteUrl: "https://movie-application-git-main-subhan513s-projects.vercel.app/",
+      githubUrl: "https://github.com/subhan513/movie-app"
     }
   ];
 
@@ -173,7 +186,7 @@ export const Projects = () => {
         <div className="text-center mb-10 sm:mb-12 lg:mb-16 animate-fade-in">
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-3 sm:mb-4 lg:mb-6 text-white">
             Our <span className="text-cyan-400">Projects</span>
-          </h2>
+        </h2>
           <p className="text-base sm:text-lg lg:text-xl text-slate-300 max-w-3xl mx-auto px-2 sm:px-4">
             Discover our latest projects showcasing innovative solutions across web development, 
             mobile applications, and modern platforms.
@@ -190,9 +203,9 @@ export const Projects = () => {
             >
               {/* Project Image */}
               <div className="relative overflow-hidden h-64 sm:h-72 md:h-80 bg-slate-900">
-                <img 
-                  src={project.image} 
-                  alt={project.title}
+                         <img
+                           src={project.image}
+                           alt={project.title}
                   className="absolute inset-0 w-full h-full object-contain transition-transform duration-500 group-hover:scale-105"
                 />
 
@@ -204,8 +217,8 @@ export const Projects = () => {
                 </div>
 
                 {/* Links */}
-                {project.websiteUrl && (
-                  <div className="absolute top-4 right-4 z-10 flex gap-2">
+                <div className="absolute top-4 right-4 z-10 flex gap-2">
+                  {project.websiteUrl && (
                     <a
                       href={project.websiteUrl}
                       target="_blank"
@@ -214,8 +227,18 @@ export const Projects = () => {
                     >
                       <FaGlobe className="w-4 h-4 text-blue-600 dark:text-blue-400" />
                     </a>
-                  </div>
-                )}
+                  )}
+                  {project.githubUrl && (
+                    <a
+                      href={project.githubUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="p-2 bg-white/90 dark:bg-black/90 rounded-full hover:bg-white dark:hover:bg-black transition-colors"
+                    >
+                      <Github className="w-4 h-4 text-gray-800 dark:text-white" />
+                    </a>
+                  )}
+                </div>
               </div>
 
               {/* Project Details */}
@@ -225,24 +248,50 @@ export const Projects = () => {
                 </h3>
                 
                 <p className="text-slate-300 text-sm sm:text-base mb-4 leading-relaxed">
-                  {project.description}
-                </p>
-
-                <div className="flex flex-wrap gap-2">
+                             {project.description}
+                           </p>
+                           
+                <div className="flex flex-wrap gap-2 mb-4">
                   {project.technologies.map((tech, i) => (
-                    <span
+                               <span
                       key={i}
                       className="flex items-center gap-2 px-3 py-1.5 text-xs bg-cyan-500/10 text-cyan-400 rounded-full border border-cyan-500/20 hover:bg-cyan-500/20 transition-colors duration-200"
-                    >
+                               >
                       {getTechIcon(tech)}
                       {tech}
-                    </span>
-                  ))}
-                </div>
-              </div>
+                               </span>
+                             ))}
+                           </div>
+                           
+                {/* Action Buttons */}
+                <div className="flex gap-3">
+                  {project.websiteUrl && (
+                    <a
+                      href={project.websiteUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 px-4 py-2 bg-cyan-500/10 text-cyan-400 rounded-lg border border-cyan-500/20 hover:bg-cyan-500/20 transition-colors duration-200 text-sm"
+                    >
+                      <FaGlobe className="w-4 h-4" />
+                      Live Demo
+                    </a>
+                  )}
+                  {project.githubUrl && (
+                    <a
+                      href={project.githubUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 px-4 py-2 bg-slate-700/50 text-white rounded-lg border border-slate-600/50 hover:bg-slate-600/50 transition-colors duration-200 text-sm"
+                    >
+                      <Github className="w-4 h-4" />
+                             View Code
+                    </a>
+                  )}
+                         </div>
+                       </div>
             </Card>
           ))}
-        </div>
+                     </div>
 
         {/* Mobile Horizontal Scroll */}
         <div className="md:hidden relative">
@@ -255,14 +304,14 @@ export const Projects = () => {
             <ChevronLeft className="w-5 h-5 text-white" />
           </button>
           
-          <button
+                      <button 
             onClick={nextProject}
             className="absolute right-1 top-1/2 -translate-y-1/2 z-20 p-2 bg-black/80 backdrop-blur-sm rounded-full shadow-lg hover:bg-black transition-all duration-200 active:scale-95"
             aria-label="Next project"
           >
             <ChevronRight className="w-5 h-5 text-white" />
-          </button>
-
+                      </button>
+                      
           {/* Horizontal Scroll Container */}
           <div 
             ref={scrollContainerRef}
@@ -288,9 +337,9 @@ export const Projects = () => {
                 <Card className="group overflow-hidden border border-slate-700/50 bg-slate-800/50 backdrop-blur-sm h-full flex flex-col rounded-lg hover:border-cyan-400/50 transition-all duration-300">
                   {/* Project Image */}
                   <div className="relative overflow-hidden h-64 bg-slate-900">
-                    <img 
-                      src={project.image} 
-                      alt={project.title}
+                        <img
+                          src={project.image}
+                          alt={project.title}
                       className="absolute inset-0 w-full h-full object-contain transition-transform duration-500 group-hover:scale-105"
                     />
 
@@ -302,8 +351,8 @@ export const Projects = () => {
                     </div>
 
                     {/* Links */}
-                    {project.websiteUrl && (
-                      <div className="absolute top-4 right-4 z-10 flex gap-2">
+                    <div className="absolute top-4 right-4 z-10 flex gap-2">
+                      {project.websiteUrl && (
                         <a
                           href={project.websiteUrl}
                           target="_blank"
@@ -312,30 +361,66 @@ export const Projects = () => {
                         >
                           <FaGlobe className="w-4 h-4 text-blue-600 dark:text-blue-400" />
                         </a>
+                      )}
+                      {project.githubUrl && (
+                        <a
+                          href={project.githubUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="p-2 bg-white/90 dark:bg-black/90 rounded-full hover:bg-white dark:hover:bg-black transition-colors"
+                        >
+                          <Github className="w-4 h-4 text-gray-800 dark:text-white" />
+                        </a>
+                      )}
+                    </div>
                       </div>
-                    )}
-                  </div>
-
+                      
                   {/* Project Details */}
                   <div className="p-6 pl-8 flex-1">
                     <h3 className="text-xl font-bold mb-3 text-white group-hover:text-cyan-400 transition-colors duration-300">
-                      {project.title}
-                    </h3>
+                          {project.title}
+                        </h3>
                     
                     <p className="text-slate-300 text-sm mb-4 leading-relaxed">
-                      {project.description}
-                    </p>
+                          {project.description}
+                        </p>
 
-                    <div className="flex flex-wrap gap-2">
+                        <div className="flex flex-wrap gap-2 mb-4">
                       {project.technologies.map((tech, i) => (
-                        <span
+                            <span
                           key={i}
                           className="flex items-center gap-2 px-3 py-1.5 text-xs bg-cyan-500/10 text-cyan-400 rounded-full border border-cyan-500/20 hover:bg-cyan-500/20 transition-colors duration-200"
-                        >
+                            >
                           {getTechIcon(tech)}
                           {tech}
-                        </span>
-                      ))}
+                            </span>
+                          ))}
+                        </div>
+
+                    {/* Action Buttons */}
+                    <div className="flex gap-3">
+                      {project.websiteUrl && (
+                        <a
+                          href={project.websiteUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center gap-2 px-3 py-2 bg-cyan-500/10 text-cyan-400 rounded-lg border border-cyan-500/20 hover:bg-cyan-500/20 transition-colors duration-200 text-xs"
+                        >
+                          <FaGlobe className="w-3 h-3" />
+                          Demo
+                        </a>
+                      )}
+                      {project.githubUrl && (
+                        <a
+                          href={project.githubUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center gap-2 px-3 py-2 bg-slate-700/50 text-white rounded-lg border border-slate-600/50 hover:bg-slate-600/50 transition-colors duration-200 text-xs"
+                        >
+                          <Github className="w-3 h-3" />
+                          Code
+                        </a>
+                      )}
                     </div>
                   </div>
                 </Card>
@@ -357,8 +442,8 @@ export const Projects = () => {
                 aria-label={`Go to project ${index + 1}`}
               />
             ))}
-          </div>
-        </div>
+                        </div>
+                      </div>
       </div>
     </section>
   );

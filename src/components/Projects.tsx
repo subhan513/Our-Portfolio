@@ -117,7 +117,14 @@ export const Projects = () => {
       image: "/lovable-uploads/chatApp.png",
       technologies: ["React", "Node.js", "Socket.io", "Responsive Design", "Real-time Updates"],
     },
-  
+    {
+      title: "NewsMonkey - Top General Headlines",
+      category: "News Platform",
+      description: "Stay updated with the latest news from around the world. Features top general headlines covering stock market updates, political developments, health news, and current affairs with a clean, responsive interface.",
+      image: "/lovable-uploads/efc34539-41a6-4d8b-9720-90395f2f231b.png",
+      technologies: ["React", "News API", "Responsive Design", "Real-time Updates"],
+      websiteUrl: "https://newsapp-three-jet.vercel.app/",
+    },
     {
       title: "Educational Institution Website",
       category: "Education Platform",

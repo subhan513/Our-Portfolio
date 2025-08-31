@@ -28,10 +28,10 @@ export const Footer = () => {
               Building scalable applications that drive business growth.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-slate-400 hover:text-cyan-400 transition-colors">
+              <a href="github.com/subhan513" className="text-slate-400 hover:text-cyan-400 transition-colors">
                 <Github size={20} />
               </a>
-              <a href="#" className="text-slate-400 hover:text-cyan-400 transition-colors">
+              <a href="www.linkedin.com/in/muhammad-subhan-6b5a1232b/" className="text-slate-400 hover:text-cyan-400 transition-colors">
                 <Linkedin size={20} />
               </a>
               {/* <a href="#" className="text-slate-400 hover:text-cyan-400 transition-colors">

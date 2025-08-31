@@ -5,9 +5,9 @@ export const Experience = () => {
   const experiences = [
     {
       title: "Senior Full Stack Developer",
-      company: "TechCorp Solutions",
+      company: "ZedStack",
       location: "Remote",
-      duration: "2023 - Present",
+      duration: "2025 - Present",
       description: "Leading development of scalable web applications using React, Node.js, and cloud technologies. Managing a team of 5 developers and overseeing project architecture.",
       achievements: [
         "Increased application performance by 40%",

@@ -32,19 +32,19 @@ export const Hero = () => {
             <div className="group text-center animate-slide-in-right backdrop-blur-sm bg-primary/20 rounded-lg p-6 sm:p-8 shadow-lg interactive-hover" style={{
             animationDelay: '0.2s'
           }}>
-              <div className="text-4xl sm:text-5xl md:text-6xl font-bold text-accent drop-shadow-lg mb-2 transition-transform duration-300 group-hover:-translate-y-2">1+</div>
+              <div className="text-4xl sm:text-5xl md:text-6xl font-bold text-accent drop-shadow-lg mb-2 transition-transform duration-300 group-hover:-translate-y-2">2+</div>
               <div className="text-base sm:text-lg text-white/80">Years Exp.</div>
             </div>
             <div className="group text-center animate-slide-in-right backdrop-blur-sm bg-accent/20 rounded-lg p-6 sm:p-8 shadow-lg interactive-hover" style={{
             animationDelay: '0.4s'
           }}>
-              <div className="text-4xl sm:text-5xl md:text-6xl font-bold text-primary drop-shadow-lg mb-2 transition-transform duration-300 group-hover:-translate-y-2">10+</div>
+              <div className="text-4xl sm:text-5xl md:text-6xl font-bold text-primary drop-shadow-lg mb-2 transition-transform duration-300 group-hover:-translate-y-2">8+</div>
               <div className="text-base sm:text-lg text-white/80">Projects</div>
             </div>
             <div className="group text-center animate-slide-in-right backdrop-blur-sm bg-primary/20 rounded-lg p-6 sm:p-8 shadow-lg interactive-hover" style={{
             animationDelay: '0.6s'
           }}>
-              <div className="text-4xl sm:text-5xl md:text-6xl font-bold text-accent drop-shadow-lg mb-2 transition-transform duration-300 group-hover:-translate-y-2">5+</div>
+              <div className="text-4xl sm:text-5xl md:text-6xl font-bold text-accent drop-shadow-lg mb-2 transition-transform duration-300 group-hover:-translate-y-2">1+</div>
               <div className="text-base sm:text-lg text-white/80">Happy Clients</div>
             </div>
           </div>

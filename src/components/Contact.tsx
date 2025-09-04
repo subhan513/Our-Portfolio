@@ -57,18 +57,17 @@ export const Contact = () => {
   return (
     <section id="contact" className="py-20 px-4 relative">
       {/* Background with gradient */}
-      <div className="absolute inset-0" style={{animation: 'gradient 8s ease-in-out infinite'}}>
+      <div className="absolute inset-0" style={{animation: 'none'}}>
         <div 
           className="absolute inset-0" 
           style={{
-            background: 'linear-gradient(135deg, hsla(216, 98%, 24%, 1) 0%, hsla(17, 73%, 25%, 1) 96%, hsla(17, 81%, 20%, 1) 100%)'
+            background: 'transparent'
           }}
         ></div>
         <div 
           className="absolute inset-0" 
           style={{
-            background: 'linear-gradient(315deg, hsla(216, 98%, 24%, 1) 0%, hsla(17, 73%, 25%, 1) 96%, hsla(17, 81%, 20%, 1) 100%)',
-            animation: 'gradient 8s ease-in-out infinite reverse'
+            background: 'transparent'
           }}
         ></div>
       </div>

@@ -15,15 +15,12 @@ const Index = () => {
     <div className="min-h-screen relative overflow-hidden">
       {/* Global Animated Gradient Background */}
       <div className="fixed inset-0 z-0" style={{
-        animation: 'gradient 8s ease-in-out infinite'
+        animation: 'none'
       }}>
         <div className="absolute inset-0" style={{
-          background: 'linear-gradient(135deg, hsl(260, 85%, 15%) 0%, hsl(190, 85%, 25%) 50%, hsl(180, 85%, 20%) 100%)'
+          background: 'hsl(220, 15%, 7%)'
         }}></div>
-        <div className="absolute inset-0" style={{
-          background: 'linear-gradient(315deg, hsl(260, 85%, 15%) 0%, hsl(190, 85%, 25%) 50%, hsl(180, 85%, 20%) 100%)',
-          animation: 'gradient 8s ease-in-out infinite reverse'
-        }}></div>
+        <div className="absolute inset-0" style={{ background: 'transparent' }}></div>
       </div>
       
       {/* Floating animated elements */}

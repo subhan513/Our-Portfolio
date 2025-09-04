@@ -198,20 +198,21 @@ export const Projects = () => {
           {projects.map((project, index) => (
             <Card 
               key={project.title} 
-              className="group overflow-hidden border border-slate-700/50 bg-slate-800/50 backdrop-blur-sm animate-fade-in h-full flex flex-col rounded-lg hover:border-cyan-400/50 transition-all duration-300"
+              className="group overflow-hidden animate-fade-in h-full flex flex-col rounded-2xl bg-slate-900/60 supports-[backdrop-filter]:bg-slate-900/40 backdrop-blur border border-slate-700/40 ring-1 ring-white/5 shadow-lg hover:shadow-xl hover:shadow-cyan-500/10 hover:-translate-y-1 hover:border-cyan-400/40 transition-all duration-300"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               {/* Project Image */}
               <div className="relative overflow-hidden h-64 sm:h-72 md:h-80 bg-slate-900">
-                         <img
-                           src={project.image}
-                           alt={project.title}
+                <img 
+                  src={project.image} 
+                  alt={project.title}
                   className="absolute inset-0 w-full h-full object-contain transition-transform duration-500 group-hover:scale-105"
                 />
+                <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-slate-900/40"></div>
 
                 {/* Category Tag */}
                 <div className="absolute top-4 left-4 z-10">
-                  <span className={`px-3 py-1 text-xs font-medium rounded-full ${getCategoryColor(project.category)}`}>
+                  <span className={`px-3 py-1 text-xs font-medium rounded-full backdrop-blur bg-white/10 ring-1 ring-white/10 shadow-sm ${getCategoryColor(project.category)}`}>
                     {project.category}
                   </span>
                 </div>
@@ -223,7 +224,7 @@ export const Projects = () => {
                       href={project.websiteUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="p-2 bg-white/90 dark:bg-black/90 rounded-full hover:bg-white dark:hover:bg-black transition-colors"
+                      className="p-2 bg-white/90 dark:bg-black/90 rounded-full hover:bg-white dark:hover:bg-black transition-colors ring-1 ring-white/10"
                     >
                       <FaGlobe className="w-4 h-4 text-blue-600 dark:text-blue-400" />
                     </a>
@@ -233,7 +234,7 @@ export const Projects = () => {
                       href={project.githubUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="p-2 bg-white/90 dark:bg-black/90 rounded-full hover:bg-white dark:hover:bg-black transition-colors"
+                      className="p-2 bg-white/90 dark:bg-black/90 rounded-full hover:bg-white dark:hover:bg-black transition-colors ring-1 ring-white/10"
                     >
                       <Github className="w-4 h-4 text-gray-800 dark:text-white" />
                     </a>
@@ -242,27 +243,28 @@ export const Projects = () => {
               </div>
 
               {/* Project Details */}
-              <div className="p-6 flex-1">
+              <div className="p-6 flex-1 bg-slate-900/90 border-t border-slate-800/80 rounded-b-2xl">
                 <h3 className="text-xl font-bold mb-3 text-white group-hover:text-cyan-400 transition-colors duration-300">
                   {project.title}
                 </h3>
                 
                 <p className="text-slate-300 text-sm sm:text-base mb-4 leading-relaxed">
-                             {project.description}
-                           </p>
-                           
+                  {project.description}
+                </p>
+                <div className="h-px bg-slate-700/60 mb-4"></div>
+
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.technologies.map((tech, i) => (
-                               <span
+                    <span
                       key={i}
-                      className="flex items-center gap-2 px-3 py-1.5 text-xs bg-cyan-500/10 text-cyan-400 rounded-full border border-cyan-500/20 hover:bg-cyan-500/20 transition-colors duration-200"
-                               >
+                      className="flex items-center gap-2 px-3 py-1.5 text-xs rounded-full bg-white/5 text-slate-200 border border-white/10 hover:bg-white/10 hover:border-white/20 transition-colors duration-200"
+                    >
                       {getTechIcon(tech)}
                       {tech}
-                               </span>
-                             ))}
-                           </div>
-                           
+                    </span>
+                  ))}
+                </div>
+
                 {/* Action Buttons */}
                 <div className="flex gap-3">
                   {project.websiteUrl && (
@@ -270,7 +272,7 @@ export const Projects = () => {
                       href={project.websiteUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-2 px-4 py-2 bg-cyan-500/10 text-cyan-400 rounded-lg border border-cyan-500/20 hover:bg-cyan-500/20 transition-colors duration-200 text-sm"
+                      className="flex items-center gap-2 px-4 py-2 rounded-lg text-sm bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 hover:bg-cyan-500/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400/40 transition-colors duration-200"
                     >
                       <FaGlobe className="w-4 h-4" />
                       Live Demo
@@ -281,14 +283,14 @@ export const Projects = () => {
                       href={project.githubUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-2 px-4 py-2 bg-slate-700/50 text-white rounded-lg border border-slate-600/50 hover:bg-slate-600/50 transition-colors duration-200 text-sm"
+                      className="flex items-center gap-2 px-4 py-2 rounded-lg text-sm bg-slate-700/60 text-white border border-slate-600/60 hover:bg-slate-600/60 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/20 transition-colors duration-200"
                     >
                       <Github className="w-4 h-4" />
-                             View Code
+                      View Code
                     </a>
                   )}
-                         </div>
-                       </div>
+                </div>
+              </div>
             </Card>
           ))}
                      </div>
@@ -376,7 +378,7 @@ export const Projects = () => {
                       </div>
                       
                   {/* Project Details */}
-                  <div className="p-6 pl-8 flex-1">
+                  <div className="p-6 pl-8 flex-1 bg-slate-900/90 border-t border-slate-700/50">
                     <h3 className="text-xl font-bold mb-3 text-white group-hover:text-cyan-400 transition-colors duration-300">
                           {project.title}
                         </h3>

@@ -124,7 +124,7 @@ export const Projects = () => {
        description: "A comprehensive recipe discovery app that helps users find, save, and create delicious recipes. Features include recipe search, ingredient filtering and personalized recipe recommendations.",
        image: "/lovable-uploads/mobile.png",
        technologies: ["React Native", "Node.js", "Express API", "Responsive Design", "neonDB"],
-       githubUrl: "https://github.com/subhan513"
+       githubUrl: "https://github.com/subhan513/Recipe-Finder-App"
      },
     {
       title: "NewsMonkey - Top General Headlines",

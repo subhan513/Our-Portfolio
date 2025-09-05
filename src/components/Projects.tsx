@@ -118,7 +118,7 @@ export const Projects = () => {
       technologies: ["React", "Node.js", "Socket.io", "Responsive Design", "Real-time Updates"],
       githubUrl: "https://github.com/subhan513/RealTime-Chat-App"
     },
-          {
+{
        title: " FullStack Recipe Finder App",
        category: "Recipe Finder App",
        description: "A comprehensive recipe discovery app that helps users find, save, and create delicious recipes. Features include recipe search, ingredient filtering and personalized recipe recommendations.",
@@ -143,15 +143,6 @@ export const Projects = () => {
       technologies: ["React", "TailwindCSS", "CMS", "Responsive Design"],
       websiteUrl: "https://sharifeducaitonalcomplex.vercel.app/",
       githubUrl: "https://github.com/subhan513/Sharif-Complex"
-    },
-    {
-      title: "QuickCart - Experience Pure Sound",
-      category: "E-commerce Platform",
-      description: "Experience Pure Sound - Your Perfect Headphones Awaits! A modern e-commerce platform featuring premium audio products with exclusive limited time offers and seamless shopping experience.",
-      image: "/lovable-uploads/d83422aa-e68c-46fa-b366-9e95ca81f7a2.png",
-      technologies: ["React", "Nodejs", "Commerce", "MongoDB", "Express"],
-      websiteUrl: "https://e-commerce-store-rho-three.vercel.app/",
-      githubUrl: "https://github.com/subhan513/ecommerce-store"
     },
     {
       title: "Movie Entertainment Platform",

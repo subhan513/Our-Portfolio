@@ -116,7 +116,7 @@ export const Projects = () => {
       description: "A real-time chat application built with React, Node.js, and Socket.io, allowing users to chat with each other in real-time. Features include user authentication, room creation, and message history.",
       image: "/lovable-uploads/chatApp.png",
       technologies: ["React", "Node.js", "Socket.io", "Responsive Design", "Real-time Updates"],
-      githubUrl: "https://github.com/subhan513/news-app"
+      githubUrl: "https://github.com/subhan513/RealTime-Chat-App"
     },
           {
        title: " FullStack Recipe Finder App",
@@ -124,7 +124,7 @@ export const Projects = () => {
        description: "A comprehensive recipe discovery app that helps users find, save, and create delicious recipes. Features include recipe search, ingredient filtering and personalized recipe recommendations.",
        image: "/lovable-uploads/mobile.png",
        technologies: ["React Native", "Node.js", "Express API", "Responsive Design", "neonDB"],
-       githubUrl: "https://github.com/subhan513/news-app"
+       githubUrl: "https://github.com/subhan513"
      },
     {
       title: "NewsMonkey - Top General Headlines",

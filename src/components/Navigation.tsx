@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { Menu, X, Code2 } from "lucide-react";
 
@@ -29,8 +28,8 @@ export const Navigation = () => {
   return (
     <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${
       scrolled 
-        ? 'bg-slate-900/95 backdrop-blur-md border-b border-cyan-400/30 shadow-2xl shadow-cyan-400/20' 
-        : 'bg-slate-900/80 backdrop-blur-sm border-b border-transparent'
+        ? 'backdrop-blur-md border-b border-cyan-400/30 shadow-2xl shadow-cyan-400/20' 
+        : 'backdrop-blur-sm border-b border-transparent'
     } h-16`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full">
         <div className="flex justify-between items-center h-full">
@@ -66,7 +65,7 @@ export const Navigation = () => {
               onClick={() => setIsOpen(!isOpen)}
               className="relative p-2 text-slate-300 hover:text-cyan-400 transition-colors duration-300 group"
             >
-              <div className="absolute inset-0 bg-slate-800/50 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div className="absolute inset-0 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               <span className="relative z-10">
                 {isOpen ? <X size={24} /> : <Menu size={24} />}
               </span>
@@ -78,7 +77,7 @@ export const Navigation = () => {
         <div className={`md:hidden transition-all duration-300 overflow-hidden ${
           isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
         }`}>
-          <div className="bg-gradient-to-b from-slate-800/95 to-slate-900/95 backdrop-blur-md rounded-xl mt-2 p-4 border border-slate-700/50 shadow-2xl">
+          <div className="backdrop-blur-md rounded-xl mt-2 p-4 border border-slate-700/50 shadow-2xl">
             {navItems.map((item, index) => (
               <a
                 key={item.name}

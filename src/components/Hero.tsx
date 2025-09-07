@@ -8,7 +8,7 @@ export const Hero = () => {
           {/* Company Text */}
           <div className="space-y-6">
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-tight text-white drop-shadow-lg">
-              <span className="text-primary">Welcome to</span> <span className="text-accent">CodeCraft</span>
+              <span className="text-primary">Welcome to</span> <span className="text-accent">Web Solutions</span>
             </h1>
             <p className="text-lg sm:text-xl md:text-2xl text-white/90 leading-relaxed drop-shadow-lg max-w-4xl mx-auto">
               We develop scalable, secure, and user-friendly web apps that deliver seamless digital experiences and drive business growth.

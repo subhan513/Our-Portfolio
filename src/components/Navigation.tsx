@@ -77,7 +77,7 @@ export const Navigation = () => {
         <div className={`md:hidden transition-all duration-300 overflow-hidden ${
           isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
         }`}>
-          <div className="backdrop-blur-md rounded-xl mt-2 p-4 border border-slate-700/50 shadow-2xl">
+          <div className="backdrop-blur-md rounded-xl mt-2 p-4  bg-black border border-slate-700/50 shadow-2xl">
             {navItems.map((item, index) => (
               <a
                 key={item.name}

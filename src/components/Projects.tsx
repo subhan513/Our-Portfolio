@@ -126,6 +126,15 @@ export const Projects = () => {
        technologies: ["React Native", "Node.js", "Express API", "Responsive Design", "neonDB"],
        githubUrl: "https://github.com/subhan513/Recipe-Finder-App"
      },
+     {
+       title: "SaaS Landing Pages",
+       category: "SaaS Landing Pages",
+       description: "",
+       image: "/lovable-uploads/saas.png",
+       technologies: ["React js", "Tailwind CSS", "Responsive Design"],
+       githubUrl: "https://github.com/subhan513/SaaS-Landing-Pages",
+       websiteUrl: "https://saas-landing-pages-self.vercel.app/",
+     },
     {
       title: "NewsMonkey - Top General Headlines",
       category: "News Platform",

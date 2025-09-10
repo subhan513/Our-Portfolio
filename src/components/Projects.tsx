@@ -116,7 +116,8 @@ export const Projects = () => {
       description: "A real-time chat application built with React, Node.js, and Socket.io, allowing users to chat with each other in real-time. Features include user authentication, room creation, and message history.",
       image: "/lovable-uploads/chatApp.png",
       technologies: ["React", "Node.js", "Socket.io", "Responsive Design", "Real-time Updates"],
-      githubUrl: "https://github.com/subhan513/RealTime-Chat-App"
+      githubUrl: "https://github.com/subhan513/RealTime-Chat-App",
+      websiteUrl: "https://drive.google.com/file/d/1iZeOolkx5UUkKdilY6TN88BTsGWlOV62/view?usp=sharing",
     },
 {
        title: " FullStack Recipe Finder App",

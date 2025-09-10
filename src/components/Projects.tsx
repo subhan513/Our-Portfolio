@@ -119,6 +119,15 @@ export const Projects = () => {
       githubUrl: "https://github.com/subhan513/RealTime-Chat-App",
       websiteUrl: "https://drive.google.com/file/d/1iZeOolkx5UUkKdilY6TN88BTsGWlOV62/view?usp=sharing",
     },
+     {
+      title: "E-Commerce Store and Admin Dashboard",
+      category: "E-Commerce Store and Admin Dashboard",
+      description: "E-Commerce Store and Admin Dashboard is a full-stack application built with React.js and Node.js.It features a secure payment system powered by Stripe and real-time updates with Redis.Admins can manage products, orders, and users while customers enjoy a seamless shopping experience.",
+      image: "/lovable-uploads/ecommerce.png",
+      technologies: ["React js"," Stripe", "Node.js"," Redis", "Responsive Design", "Real-time Updates"],
+      githubUrl: "",
+      websiteUrl: "",
+    },
 {
        title: " FullStack Recipe Finder App",
        category: "Recipe Finder App",

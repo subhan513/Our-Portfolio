@@ -1,9 +1,10 @@
-import { FaReact, FaNodeJs, FaDatabase, FaJs, FaCss3Alt, FaHtml5, FaGitAlt } from 'react-icons/fa';
+import { FaReact, FaNodeJs, FaDatabase,FaMobileAlt,FaJs, FaCss3Alt, FaHtml5, FaGitAlt } from 'react-icons/fa';
 import { SiTailwindcss, SiMongodb, SiFirebase, SiExpress,SiSupabase } from 'react-icons/si';
 
 export const Skills = () => {
   const skills = [
     { name: "React", icon: FaReact },
+    { name: "React Native", icon: FaMobileAlt},
     { name: "Tailwind CSS", icon: SiTailwindcss },
     { name: "Node.js", icon: FaNodeJs },
     { name: "Express", icon: SiExpress },

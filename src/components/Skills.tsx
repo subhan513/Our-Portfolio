@@ -1,5 +1,5 @@
 import { FaReact, FaNodeJs, FaDatabase,FaMobileAlt,FaJs, FaCss3Alt, FaHtml5, FaGitAlt } from 'react-icons/fa';
-import { SiTailwindcss, SiMongodb, SiFirebase, SiExpress,SiSupabase, SiTypescript } from 'react-icons/si';
+import { SiTailwindcss, SiMongodb, SiFirebase, SiExpress,SiSupabase, SiTypescript, SiJavascript } from 'react-icons/si';
 
 export const Skills = () => {
   const skills = [
@@ -11,6 +11,7 @@ export const Skills = () => {
     { name: "Git", icon: FaGitAlt },
     { name: "Firebase", icon: SiFirebase },
     { name: "TypeScript", icon: SiTypescript },
+    {name : "JavaScript", icon : SiJavascript}
   ];
 
   const SkillIcon = ({ skill }: { skill: any }) => {

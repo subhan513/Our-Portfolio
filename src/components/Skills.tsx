@@ -9,7 +9,6 @@ export const Skills = () => {
     { name: "Express", icon: SiExpress },
     { name: "MongoDB", icon: SiMongodb },
     { name: "Git", icon: FaGitAlt },
-    { name: "Firebase", icon: SiFirebase },
     { name: "TypeScript", icon: SiTypescript },
     {name : "JavaScript", icon : SiJavascript}
   ];

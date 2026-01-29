@@ -4,14 +4,11 @@ import { SiTailwindcss, SiMongodb, SiFirebase, SiExpress,SiSupabase } from 'reac
 export const Skills = () => {
   const skills = [
     { name: "React", icon: FaReact },
-    { name: "React Native", icon: FaMobileAlt},
     { name: "Tailwind CSS", icon: SiTailwindcss },
     { name: "Node.js", icon: FaNodeJs },
     { name: "Express", icon: SiExpress },
     { name: "MongoDB", icon: SiMongodb },
     { name: "Git", icon: FaGitAlt },
-    { name: "Firebase", icon: SiFirebase },
-    { name: "Supabase", icon: SiSupabase },
   ];
 
   const SkillIcon = ({ skill }: { skill: any }) => {

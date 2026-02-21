@@ -101,7 +101,7 @@ export const Contact = () => {
               </div>
               <div>
                 <h3 className="text-white font-semibold drop-shadow-lg">LinkedIn</h3>
-                <p className="text-white/80">www.linkedin.com/in/muhammad-subhan-6b5a1232b/</p>
+                <p className="text-white/80">https://www.linkedin.com/in/muhammadsubhandev/</p>
               </div>
             </div>
 

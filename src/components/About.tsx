@@ -65,9 +65,9 @@ export const About = () => {
                 <div className="text-center">
                   <div className="w-40 h-40 mx-auto mb-4 rounded-2xl overflow-hidden shadow-lg border-4 border-gradient-to-br from-zed-orange to-zed-blue">
                     <img 
-                      src="/lovable-uploads/3a204c5c-c862-4463-bd90-bafb57a9ff0f.png" 
+                      src="/lovable-uploads/subhanfile.jpg" 
                       alt="Professional Developer Profile" 
-                      className="w-full h-full object-cover"
+                      className="w-full h-full"
                     />
                   </div>
                   <p className="text-white/90 text-sm font-semibold">MernStack Developer</p>

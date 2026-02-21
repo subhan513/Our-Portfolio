@@ -1,58 +1,74 @@
 import { ArrowDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
+
+const stats = [
+  { label: "Years Experience", value: "2+", bg: "bg-primary/20", color: "text-accent", delay: "0.2s" },
+  { label: "Projects Completed", value: "8+", bg: "bg-accent/20", color: "text-primary", delay: "0.4s" },
+  { label: "Happy Clients", value: "1+", bg: "bg-primary/20", color: "text-accent", delay: "0.6s" },
+  { label: "Problems Solved", value: "120+", bg: "bg-accent/20", color: "text-primary", delay: "0.8s" },
+  { label: "Passionate", value: "💡", bg: "bg-primary/20", color: "text-accent", delay: "1s" },
+];
+
 export const Hero = () => {
-  return <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-28 md:pt-32">
+  return (
+    <section
+      id="home"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden pt-28 md:pt-32 bg-premium-gradient"
+    >
       {/* Content */}
       <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center space-y-8 animate-fade-in">
-          {/* Company Text */}
+          {/* Hero Text */}
           <div className="space-y-6">
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-tight text-white drop-shadow-lg">
-              <span className="text-primary">Hi</span> <span className="text-accent">I am a MernStack Developer</span>
+              <span className="text-primary">Hi </span>{" "}
+              <span className="text-accent">I am a MERN Stack Developer</span>
             </h1>
             <p className="text-lg sm:text-xl md:text-2xl text-white/90 leading-relaxed drop-shadow-lg max-w-4xl mx-auto">
-              I develop scalable, secure, and user-friendly web apps that deliver seamless digital experiences and drive business growth.
+              I build scalable, secure, and user-friendly web apps. Passionate about problem solving, I’ve solved 90+ coding challenges and delivered 8+ projects.
             </p>
           </div>
 
           {/* Action Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center pt-8 animate-fade-in" style={{
-          animationDelay: '0.3s'
-        }}>
-            <Button className="bg-primary hover:bg-accent text-white hover:text-white shadow-2xl hover:shadow-xl transition-all duration-300 px-8 sm:px-10 py-4 sm:py-5 text-lg sm:text-xl backdrop-blur-sm interactive-hover h-auto w-full sm:w-auto">
-              <a href="#contact">Let's discuss your Idea!</a>
+          <div
+            className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center pt-8 animate-fade-in"
+            style={{ animationDelay: "0.3s" }}
+          >
+            <Button className="bg-primary hover:bg-accent text-white shadow-2xl transition-all duration-300 px-8 sm:px-10 py-4 sm:py-5 text-lg sm:text-xl interactive-hover h-auto w-full sm:w-auto">
+              <a href="#contact">Let's Discuss Your Idea!</a>
             </Button>
-            <Button variant="outline" className="bg-transparent border-2 border-primary hover:border-accent hover:bg-primary/10 text-white hover:text-white backdrop-blur-sm px-8 sm:px-10 py-4 sm:py-5 text-lg sm:text-xl shadow-lg interactive-hover h-auto w-full sm:w-auto">
+            <Button
+              variant="outline"
+              className="bg-transparent border-2 border-primary hover:border-accent hover:bg-primary/10 text-white backdrop-blur-sm px-8 sm:px-10 py-4 sm:py-5 text-lg sm:text-xl shadow-lg interactive-hover h-auto w-full sm:w-auto"
+            >
               <a href="#projects">View My Work</a>
             </Button>
           </div>
 
-          {/* Stats */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 md:gap-10 pt-16 sm:pt-20 max-w-4xl mx-auto">
-            <div className="group text-center animate-slide-in-right backdrop-blur-sm bg-primary/20 rounded-lg p-6 sm:p-8 shadow-lg interactive-hover" style={{
-            animationDelay: '0.2s'
-          }}>
-              <div className="text-4xl sm:text-5xl md:text-6xl font-bold text-accent drop-shadow-lg mb-2 transition-transform duration-300 group-hover:-translate-y-2">2+</div>
-              <div className="text-base sm:text-lg text-white/80">Years Exp.</div>
-            </div>
-            <div className="group text-center animate-slide-in-right backdrop-blur-sm bg-accent/20 rounded-lg p-6 sm:p-8 shadow-lg interactive-hover" style={{
-            animationDelay: '0.4s'
-          }}>
-              <div className="text-4xl sm:text-5xl md:text-6xl font-bold text-primary drop-shadow-lg mb-2 transition-transform duration-300 group-hover:-translate-y-2">8+</div>
-              <div className="text-base sm:text-lg text-white/80">Projects</div>
-            </div>
-            <div className="group text-center animate-slide-in-right backdrop-blur-sm bg-primary/20 rounded-lg p-6 sm:p-8 shadow-lg interactive-hover" style={{
-            animationDelay: '0.6s'
-          }}>
-              <div className="text-4xl sm:text-5xl md:text-6xl font-bold text-accent drop-shadow-lg mb-2 transition-transform duration-300 group-hover:-translate-y-2">1+</div>
-              <div className="text-base sm:text-lg text-white/80">Happy Clients</div>
-            </div>
+          {/* Stats Grid */}
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 sm:gap-6 md:gap-8 pt-16 sm:pt-20 max-w-6xl mx-auto">
+            {stats.map((stat, index) => (
+              <div
+                key={index}
+                className={`group text-center animate-slide-in-right ${stat.bg} rounded-lg p-6 sm:p-8 shadow-lg interactive-hover`}
+                style={{ animationDelay: stat.delay }}
+              >
+                <div
+                  className={`text-3xl sm:text-4xl md:text-5xl font-bold ${stat.color} drop-shadow-lg mb-2 transition-transform duration-300 group-hover:-translate-y-2`}
+                >
+                  {stat.value}
+                </div>
+                <div className="text-base sm:text-lg text-white/80">{stat.label}</div>
+              </div>
+            ))}
           </div>
         </div>
       </div>
-      
+
+      {/* Scroll Down Arrow */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
         <ArrowDown className="text-white" size={32} />
       </div>
-    </section>;
+    </section>
+  );
 };

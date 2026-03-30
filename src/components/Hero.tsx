@@ -13,18 +13,18 @@ export const Hero = () => {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden pt-28 md:pt-32 bg-premium-gradient"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden pt-28 md:pt-32"
     >
       {/* Content */}
       <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center space-y-8 animate-fade-in">
           {/* Hero Text */}
           <div className="space-y-6">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-tight text-white drop-shadow-lg">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-tight text-foreground">
               <span className="text-primary">Hi </span>{" "}
-              <span className="text-accent">I am a MERN Stack Developer</span>
+              <span className="text-foreground">I am a MERN Stack Developer</span>
             </h1>
-            <p className="text-lg sm:text-xl md:text-2xl text-white/90 leading-relaxed drop-shadow-lg max-w-4xl mx-auto">
+            <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground leading-relaxed max-w-4xl mx-auto">
               I build scalable, secure, and user-friendly web apps. Passionate about problem solving, I’ve solved 90+ coding challenges and delivered 8+ projects.
             </p>
           </div>
@@ -34,12 +34,12 @@ export const Hero = () => {
             className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center pt-8 animate-fade-in"
             style={{ animationDelay: "0.3s" }}
           >
-            <Button className="bg-primary hover:bg-accent text-white shadow-2xl transition-all duration-300 px-8 sm:px-10 py-4 sm:py-5 text-lg sm:text-xl interactive-hover h-auto w-full sm:w-auto">
+            <Button className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-lg transition-all duration-300 px-8 sm:px-10 py-4 sm:py-5 text-lg sm:text-xl interactive-hover h-auto w-full sm:w-auto">
               <a href="#contact">Let's Discuss Your Idea!</a>
             </Button>
             <Button
               variant="outline"
-              className="bg-transparent border-2 border-primary hover:border-accent hover:bg-primary/10 text-white backdrop-blur-sm px-8 sm:px-10 py-4 sm:py-5 text-lg sm:text-xl shadow-lg interactive-hover h-auto w-full sm:w-auto"
+              className="bg-card/60 border-2 border-border hover:border-primary hover:bg-primary/10 text-foreground backdrop-blur-sm px-8 sm:px-10 py-4 sm:py-5 text-lg sm:text-xl shadow-lg interactive-hover h-auto w-full sm:w-auto"
             >
               <a href="#projects">View My Work</a>
             </Button>
@@ -50,15 +50,15 @@ export const Hero = () => {
             {stats.map((stat, index) => (
               <div
                 key={index}
-                className={`group text-center animate-slide-in-right ${stat.bg} rounded-lg p-6 sm:p-8 shadow-lg interactive-hover`}
+                className={`group text-center animate-slide-in-right glass-panel rounded-lg p-6 sm:p-8 shadow-lg interactive-hover`}
                 style={{ animationDelay: stat.delay }}
               >
                 <div
-                  className={`text-3xl sm:text-4xl md:text-5xl font-bold ${stat.color} drop-shadow-lg mb-2 transition-transform duration-300 group-hover:-translate-y-2`}
+                  className={`text-3xl sm:text-4xl md:text-5xl font-bold text-primary mb-2 transition-transform duration-300 group-hover:-translate-y-2`}
                 >
                   {stat.value}
                 </div>
-                <div className="text-base sm:text-lg text-white/80">{stat.label}</div>
+                <div className="text-base sm:text-lg text-muted-foreground">{stat.label}</div>
               </div>
             ))}
           </div>
@@ -67,7 +67,7 @@ export const Hero = () => {
 
       {/* Scroll Down Arrow */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <ArrowDown className="text-white" size={32} />
+        <ArrowDown className="text-foreground/80" size={32} />
       </div>
     </section>
   );

@@ -9,68 +9,61 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* ===== PREMIUM SAAS DARK THEME ===== */
+    --background: 222 47% 8%;
+    --foreground: 210 40% 96%;
 
-    --background: 230 40% 8%;
-    --foreground: 210 40% 98%;
+    --card: 222 40% 12%;
+    --card-foreground: 210 40% 96%;
 
-    --card: 230 40% 12%;
-    --card-foreground: 210 40% 98%;
+    --popover: 222 40% 12%;
+    --popover-foreground: 210 40% 96%;
 
-    --popover: 230 40% 12%;
-    --popover-foreground: 210 40% 98%;
-
-    /* Primary = Royal Indigo */
-    --primary: 245 90% 65%;
+    --primary: 217 91% 60%;
     --primary-foreground: 0 0% 100%;
 
-    /* Secondary = Neon Cyan */
-    --secondary: 190 95% 55%;
-    --secondary-foreground: 0 0% 10%;
+    --secondary: 217 33% 17%;
+    --secondary-foreground: 210 40% 96%;
 
-    /* Accent = Soft Violet Glow */
-    --accent: 280 85% 70%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 199 89% 48%;
+    --accent-foreground: 210 40% 96%;
 
-    --muted: 230 25% 18%;
-    --muted-foreground: 215 20% 70%;
+    --muted: 217 28% 18%;
+    --muted-foreground: 215 20% 73%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 230 25% 20%;
-    --input: 230 25% 20%;
-    --ring: 190 95% 55%;
+    --border: 217 28% 24%;
+    --input: 217 28% 24%;
+    --ring: 199 89% 48%;
 
     --radius: 0.75rem;
 
-    /* ===== CUSTOM BRAND COLORS ===== */
-
-    --zed-blue: 245 90% 65%;
-    --zed-blue-light: 245 90% 75%;
-    --zed-blue-dark: 245 90% 55%;
+    --zed-blue: 217 91% 60%;
+    --zed-blue-light: 213 94% 68%;
+    --zed-blue-dark: 221 83% 53%;
 
     --zed-orange: 190 95% 55%;
     --zed-orange-light: 190 95% 65%;
     --zed-orange-dark: 190 95% 45%;
 
-    --zed-gradient-start: 230 40% 8%;
-    --zed-gradient-mid: 245 60% 20%;
-    --zed-gradient-end: 190 60% 15%;
+    --zed-gradient-start: 222 47% 8%;
+    --zed-gradient-mid: 223 41% 13%;
+    --zed-gradient-end: 220 37% 10%;
 
-    --sidebar-background: 230 40% 10%;
-    --sidebar-foreground: 210 40% 98%;
-    --sidebar-primary: 245 90% 65%;
+    --sidebar-background: 222 47% 10%;
+    --sidebar-foreground: 210 40% 96%;
+    --sidebar-primary: 217 91% 60%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 190 95% 55%;
-    --sidebar-accent-foreground: 0 0% 10%;
-    --sidebar-border: 230 25% 18%;
-    --sidebar-ring: 190 95% 55%;
+    --sidebar-accent: 199 89% 48%;
+    --sidebar-accent-foreground: 210 40% 96%;
+    --sidebar-border: 217 28% 18%;
+    --sidebar-ring: 199 89% 48%;
   }
 
   .dark {
-    --background: 230 40% 8%;
-    --foreground: 210 40% 98%;
+    --background: 222 47% 8%;
+    --foreground: 210 40% 96%;
   }
 }
 
@@ -81,6 +74,11 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+    background-image: radial-gradient(circle at 20% 10%, hsl(var(--primary) / 0.12), transparent 35%),
+      radial-gradient(circle at 80% 15%, hsl(var(--accent) / 0.1), transparent 35%),
+      linear-gradient(180deg, hsl(var(--background)), hsl(222 45% 6%));
+    font-feature-settings: "rlig" 1, "calt" 1;
+    min-height: 100vh;
   }
 }
 
@@ -196,4 +194,10 @@ All colors MUST be HSL.
 /* Smooth scrolling */
 html {
   scroll-behavior: smooth;
+}
+
+.glass-panel {
+  background: hsl(var(--card) / 0.7);
+  border: 1px solid hsl(var(--border));
+  backdrop-filter: blur(10px);
 }

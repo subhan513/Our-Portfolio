@@ -13,40 +13,16 @@ import { WhatsAppFloat } from "@/components/WhatsAppFloat";
 const Index = () => {
   return (
     <div className="min-h-screen relative overflow-hidden">
-      {/* Global Animated Gradient Background */}
-      <div className="fixed inset-0 z-0" style={{
-        animation: 'none'
-      }}>
-        <div className="absolute inset-0" style={{
-          background: 'hsl(220, 15%, 7%)'
-        }}></div>
-        <div className="absolute inset-0" style={{ background: 'transparent' }}></div>
-      </div>
-      
-      {/* Floating animated elements */}
-      <div className="fixed inset-0 z-0">
-        <div className="absolute w-72 h-72 bg-zed-blue/20 rounded-full mix-blend-multiply filter blur-xl animate-float interactive-hover" style={{
-          top: '22.9901%',
-          left: '19.9642%'
-        }}></div>
-        <div className="absolute w-72 h-72 bg-zed-orange/20 rounded-full mix-blend-multiply filter blur-xl animate-float" style={{
-          animationDelay: '2s',
-          top: '44.4851%',
-          right: '19.9642%'
-        }}></div>
-        <div className="absolute w-72 h-72 bg-zed-blue/15 rounded-full mix-blend-multiply filter blur-xl animate-float interactive-hover" style={{
-          animationDelay: '4s',
-          bottom: '22.9901%',
-          left: '54.9821%',
-          transform: 'translateX(-50%)'
-        }}></div>
+      <div className="fixed inset-0 z-0 pointer-events-none">
+        <div className="absolute -top-32 -left-24 h-80 w-80 rounded-full bg-primary/20 blur-3xl" />
+        <div className="absolute top-48 -right-24 h-72 w-72 rounded-full bg-accent/20 blur-3xl" />
+        <div className="absolute bottom-16 left-1/2 h-64 w-64 -translate-x-1/2 rounded-full bg-primary/10 blur-3xl" />
       </div>
 
-      {/* Content with proper z-index */}
       <div className="relative z-10">
         <Navigation />
         <Hero />
-        <div className="py-8"></div> {/* Spacing between Hero and About */}
+        <div className="py-8"></div>
         <About />
         <Services />
         <Skills />
@@ -55,8 +31,7 @@ const Index = () => {
         <Contact />
         <Footer />
       </div>
-      
-      {/* WhatsApp Float Button */}
+
       <WhatsAppFloat />
     </div>
   );

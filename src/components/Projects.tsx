@@ -1,8 +1,8 @@
 
 import { Card } from '@/components/ui/card';
-import { ExternalLink, Youtube, ChevronLeft, ChevronRight, Github } from 'lucide-react';
-import { FaGlobe, FaYoutube, FaReact, FaNodeJs, FaDatabase, FaJs, FaCss3Alt, FaHtml5, FaFigma, FaUnity, FaCamera } from 'react-icons/fa';
-import { SiTypescript, SiTailwindcss, SiMongodb, SiFirebase, SiFlutter, SiNextdotjs, SiRedux, SiReactquery, SiClerk, SiSupabase, SiStripe, SiVercel, SiNetlify, SiAmazon, SiSharp, SiAppwrite } from 'react-icons/si';
+import { ChevronLeft, ChevronRight, Github } from 'lucide-react';
+import { FaGlobe, FaReact, FaNodeJs, FaDatabase, FaJs, FaCss3Alt, FaHtml5, FaFigma, FaUnity, FaCamera } from 'react-icons/fa';
+import { SiTypescript, SiTailwindcss, SiMongodb, SiFirebase, SiFlutter, SiNextdotjs, SiRedux, SiClerk, SiSupabase, SiVercel, SiSharp, SiAppwrite } from 'react-icons/si';
 import { useState, useRef } from 'react';
 
 export const Projects = () => {
@@ -177,27 +177,27 @@ export const Projects = () => {
   const getCategoryColor = (category: string) => {
     switch (category) {
       case 'News Platform':
-        return 'bg-blue-100 text-blue-600 dark:bg-blue-900 dark:text-blue-400';
+        return 'bg-blue-500/15 text-blue-300 border border-blue-400/30';
       case 'Education Platform':
-        return 'bg-green-100 text-green-600 dark:bg-green-900 dark:text-green-400';
+        return 'bg-emerald-500/15 text-emerald-300 border border-emerald-400/30';
       case 'E-commerce Platform':
-        return 'bg-orange-100 text-orange-600 dark:bg-orange-900 dark:text-orange-400';
+        return 'bg-amber-500/15 text-amber-300 border border-amber-400/30';
       case 'Entertainment Platform':
-        return 'bg-purple-100 text-purple-600 dark:bg-purple-900 dark:text-purple-400';
+        return 'bg-purple-500/15 text-purple-300 border border-purple-400/30';
       default:
-        return 'bg-blue-100 text-blue-600 dark:bg-blue-900 dark:text-blue-400';
+        return 'bg-primary/15 text-primary border border-primary/30';
     }
   };
 
   return (
-    <section id="projects" className="py-16 sm:py-20 lg:py-28 xl:py-32 bg-accent/5">
+    <section id="projects" className="py-16 sm:py-20 lg:py-28 xl:py-32">
       <div className="max-w-7xl mx-auto px-3 sm:px-4 lg:px-6 xl:px-8">
         {/* Section Header */}
         <div className="text-center mb-10 sm:mb-12 lg:mb-16 animate-fade-in">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-3 sm:mb-4 lg:mb-6 text-white">
-            Our <span className="text-cyan-400">Projects</span>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-3 sm:mb-4 lg:mb-6 text-foreground">
+            Featured <span className="text-primary">Projects</span>
         </h2>
-          <p className="text-base sm:text-lg lg:text-xl text-slate-300 max-w-3xl mx-auto px-2 sm:px-4">
+          <p className="text-base sm:text-lg lg:text-xl text-muted-foreground max-w-3xl mx-auto px-2 sm:px-4">
             Discover our latest projects showcasing innovative solutions across web development, 
             mobile applications, and modern platforms.
           </p>
@@ -208,21 +208,21 @@ export const Projects = () => {
           {projects.map((project, index) => (
             <Card 
               key={project.title} 
-              className="group overflow-hidden animate-fade-in h-full flex flex-col rounded-2xl bg-slate-900/60 supports-[backdrop-filter]:bg-slate-900/40 backdrop-blur border border-slate-700/40 ring-1 ring-white/5 shadow-lg hover:shadow-xl hover:shadow-cyan-500/10 hover:-translate-y-1 hover:border-cyan-400/40 transition-all duration-300"
+              className="group overflow-hidden animate-fade-in h-full flex flex-col rounded-2xl bg-card/80 supports-[backdrop-filter]:bg-card/65 backdrop-blur border border-border shadow-lg hover:shadow-xl hover:shadow-primary/10 hover:-translate-y-1 hover:border-primary/40 transition-all duration-300"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               {/* Project Image */}
-              <div className="relative overflow-hidden h-64 sm:h-72 md:h-80 bg-slate-900">
+              <div className="relative overflow-hidden h-64 sm:h-72 md:h-80 bg-background/70">
                 <img 
                   src={project.image} 
                   alt={project.title}
                   className="absolute inset-0 w-full h-full object-contain transition-transform duration-500 group-hover:scale-105"
                 />
-                <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-slate-900/40"></div>
+                <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-background/60"></div>
 
                 {/* Category Tag */}
                 <div className="absolute top-4 left-4 z-10">
-                  <span className={`px-3 py-1 text-xs font-medium rounded-full backdrop-blur bg-white/10 ring-1 ring-white/10 shadow-sm ${getCategoryColor(project.category)}`}>
+                  <span className={`px-3 py-1 text-xs font-medium rounded-full backdrop-blur shadow-sm ${getCategoryColor(project.category)}`}>
                     {project.category}
                   </span>
                 </div>
@@ -234,9 +234,9 @@ export const Projects = () => {
                       href={project.websiteUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="p-2 bg-white/90 dark:bg-black/90 rounded-full hover:bg-white dark:hover:bg-black transition-colors ring-1 ring-white/10"
+                      className="p-2 bg-background/90 rounded-full hover:bg-background transition-colors ring-1 ring-border"
                     >
-                      <FaGlobe className="w-4 h-4 text-blue-600 dark:text-blue-400" />
+                      <FaGlobe className="w-4 h-4 text-primary" />
                     </a>
                   )}
                   {project.githubUrl && (
@@ -244,30 +244,30 @@ export const Projects = () => {
                       href={project.githubUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="p-2 bg-white/90 dark:bg-black/90 rounded-full hover:bg-white dark:hover:bg-black transition-colors ring-1 ring-white/10"
+                      className="p-2 bg-background/90 rounded-full hover:bg-background transition-colors ring-1 ring-border"
                     >
-                      <Github className="w-4 h-4 text-gray-800 dark:text-white" />
+                      <Github className="w-4 h-4 text-foreground" />
                     </a>
                   )}
                 </div>
               </div>
 
               {/* Project Details */}
-              <div className="p-6 flex-1 bg-slate-900/90 border-t border-slate-800/80 rounded-b-2xl">
-                <h3 className="text-xl font-bold mb-3 text-white group-hover:text-cyan-400 transition-colors duration-300">
+              <div className="p-6 flex-1 bg-card/95 border-t border-border rounded-b-2xl">
+                <h3 className="text-xl font-bold mb-3 text-foreground group-hover:text-primary transition-colors duration-300">
                   {project.title}
                 </h3>
                 
-                <p className="text-slate-300 text-sm sm:text-base mb-4 leading-relaxed">
-                  {project.description}
+                <p className="text-muted-foreground text-sm sm:text-base mb-4 leading-relaxed min-h-[3rem]">
+                  {project.description || "A production-focused project that demonstrates clean architecture, responsive UI, and practical business value."}
                 </p>
-                <div className="h-px bg-slate-700/60 mb-4"></div>
+                <div className="h-px bg-border mb-4"></div>
 
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.technologies.map((tech, i) => (
                     <span
                       key={i}
-                      className="flex items-center gap-2 px-3 py-1.5 text-xs rounded-full bg-white/5 text-slate-200 border border-white/10 hover:bg-white/10 hover:border-white/20 transition-colors duration-200"
+                      className="flex items-center gap-2 px-3 py-1.5 text-xs rounded-full bg-secondary text-foreground border border-border hover:border-primary/40 transition-colors duration-200"
                     >
                       {getTechIcon(tech)}
                       {tech}
@@ -282,7 +282,7 @@ export const Projects = () => {
                       href={project.websiteUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-2 px-4 py-2 rounded-lg text-sm bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 hover:bg-cyan-500/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400/40 transition-colors duration-200"
+                      className="flex items-center gap-2 px-4 py-2 rounded-lg text-sm bg-primary/10 text-primary border border-primary/25 hover:bg-primary/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40 transition-colors duration-200"
                     >
                       <FaGlobe className="w-4 h-4" />
                       Live Demo
@@ -293,7 +293,7 @@ export const Projects = () => {
                       href={project.githubUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-2 px-4 py-2 rounded-lg text-sm bg-slate-700/60 text-white border border-slate-600/60 hover:bg-slate-600/60 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/20 transition-colors duration-200"
+                      className="flex items-center gap-2 px-4 py-2 rounded-lg text-sm bg-secondary text-foreground border border-border hover:border-primary/40 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/30 transition-colors duration-200"
                     >
                       <Github className="w-4 h-4" />
                       View Code
@@ -310,18 +310,18 @@ export const Projects = () => {
           {/* Navigation Arrows */}
           <button
             onClick={prevProject}
-            className="absolute left-1 top-1/2 -translate-y-1/2 z-20 p-2 bg-black/80 backdrop-blur-sm rounded-full shadow-lg hover:bg-black transition-all duration-200 active:scale-95"
+            className="absolute left-1 top-1/2 -translate-y-1/2 z-20 p-2 bg-card/90 backdrop-blur-sm rounded-full shadow-lg hover:bg-card transition-all duration-200 active:scale-95 border border-border"
             aria-label="Previous project"
           >
-            <ChevronLeft className="w-5 h-5 text-white" />
+            <ChevronLeft className="w-5 h-5 text-foreground" />
           </button>
           
                       <button 
             onClick={nextProject}
-            className="absolute right-1 top-1/2 -translate-y-1/2 z-20 p-2 bg-black/80 backdrop-blur-sm rounded-full shadow-lg hover:bg-black transition-all duration-200 active:scale-95"
+            className="absolute right-1 top-1/2 -translate-y-1/2 z-20 p-2 bg-card/90 backdrop-blur-sm rounded-full shadow-lg hover:bg-card transition-all duration-200 active:scale-95 border border-border"
             aria-label="Next project"
           >
-            <ChevronRight className="w-5 h-5 text-white" />
+            <ChevronRight className="w-5 h-5 text-foreground" />
                       </button>
                       
           {/* Horizontal Scroll Container */}
@@ -346,9 +346,9 @@ export const Projects = () => {
           >
             {projects.map((project, index) => (
               <div key={project.title} className="flex-shrink-0 w-80 snap-center snap-always">
-                <Card className="group overflow-hidden border border-slate-700/50 bg-slate-800/50 backdrop-blur-sm h-full flex flex-col rounded-lg hover:border-cyan-400/50 transition-all duration-300">
+                <Card className="group overflow-hidden border border-border bg-card/80 backdrop-blur-sm h-full flex flex-col rounded-lg hover:border-primary/50 transition-all duration-300">
                   {/* Project Image */}
-                  <div className="relative overflow-hidden h-64 bg-slate-900">
+                  <div className="relative overflow-hidden h-64 bg-background/70">
                         <img
                           src={project.image}
                           alt={project.title}
@@ -369,9 +369,9 @@ export const Projects = () => {
                           href={project.websiteUrl}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="p-2 bg-white/90 dark:bg-black/90 rounded-full hover:bg-white dark:hover:bg-black transition-colors"
+                          className="p-2 bg-background/90 rounded-full hover:bg-background transition-colors border border-border"
                         >
-                          <FaGlobe className="w-4 h-4 text-blue-600 dark:text-blue-400" />
+                          <FaGlobe className="w-4 h-4 text-primary" />
                         </a>
                       )}
                       {project.githubUrl && (
@@ -379,29 +379,29 @@ export const Projects = () => {
                           href={project.githubUrl}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="p-2 bg-white/90 dark:bg-black/90 rounded-full hover:bg-white dark:hover:bg-black transition-colors"
+                          className="p-2 bg-background/90 rounded-full hover:bg-background transition-colors border border-border"
                         >
-                          <Github className="w-4 h-4 text-gray-800 dark:text-white" />
+                          <Github className="w-4 h-4 text-foreground" />
                         </a>
                       )}
                     </div>
                       </div>
                       
                   {/* Project Details */}
-                  <div className="p-6 pl-8 flex-1 bg-slate-900/90 border-t border-slate-700/50">
-                    <h3 className="text-xl font-bold mb-3 text-white group-hover:text-cyan-400 transition-colors duration-300">
+                  <div className="p-6 pl-8 flex-1 bg-card/95 border-t border-border">
+                    <h3 className="text-xl font-bold mb-3 text-foreground group-hover:text-primary transition-colors duration-300">
                           {project.title}
                         </h3>
                     
-                    <p className="text-slate-300 text-sm mb-4 leading-relaxed">
-                          {project.description}
+                    <p className="text-muted-foreground text-sm mb-4 leading-relaxed">
+                          {project.description || "A production-focused project that demonstrates clean architecture, responsive UI, and practical business value."}
                         </p>
 
                         <div className="flex flex-wrap gap-2 mb-4">
                       {project.technologies.map((tech, i) => (
                             <span
                           key={i}
-                          className="flex items-center gap-2 px-3 py-1.5 text-xs bg-cyan-500/10 text-cyan-400 rounded-full border border-cyan-500/20 hover:bg-cyan-500/20 transition-colors duration-200"
+                          className="flex items-center gap-2 px-3 py-1.5 text-xs bg-secondary text-foreground rounded-full border border-border hover:border-primary/40 transition-colors duration-200"
                             >
                           {getTechIcon(tech)}
                           {tech}
@@ -416,7 +416,7 @@ export const Projects = () => {
                           href={project.websiteUrl}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="flex items-center gap-2 px-3 py-2 bg-cyan-500/10 text-cyan-400 rounded-lg border border-cyan-500/20 hover:bg-cyan-500/20 transition-colors duration-200 text-xs"
+                          className="flex items-center gap-2 px-3 py-2 bg-primary/10 text-primary rounded-lg border border-primary/25 hover:bg-primary/20 transition-colors duration-200 text-xs"
                         >
                           <FaGlobe className="w-3 h-3" />
                           Demo
@@ -427,7 +427,7 @@ export const Projects = () => {
                           href={project.githubUrl}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="flex items-center gap-2 px-3 py-2 bg-slate-700/50 text-white rounded-lg border border-slate-600/50 hover:bg-slate-600/50 transition-colors duration-200 text-xs"
+                          className="flex items-center gap-2 px-3 py-2 bg-secondary text-foreground rounded-lg border border-border hover:border-primary/40 transition-colors duration-200 text-xs"
                         >
                           <Github className="w-3 h-3" />
                           Code
@@ -448,8 +448,8 @@ export const Projects = () => {
                 onClick={() => scrollToProject(index)}
                 className={`w-3 h-3 rounded-full transition-all duration-300 hover:scale-110 active:scale-95 ${
                   index === currentIndex 
-                    ? 'bg-cyan-400 shadow-lg' 
-                    : 'bg-cyan-400/30 hover:bg-cyan-400/50'
+                    ? 'bg-primary shadow-lg' 
+                    : 'bg-primary/30 hover:bg-primary/50'
                 }`}
                 aria-label={`Go to project ${index + 1}`}
               />

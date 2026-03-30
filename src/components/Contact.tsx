@@ -74,10 +74,10 @@ export const Contact = () => {
 
       <div className="max-w-6xl mx-auto relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 drop-shadow-lg">
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
             Contact Me
           </h2>
-          <p className="text-xl text-white/80 drop-shadow-lg">
+          <p className="text-xl text-muted-foreground">
             Let's connect and build something amazing together!
           </p>
         </div>
@@ -85,39 +85,39 @@ export const Contact = () => {
         <div className="grid md:grid-cols-2 gap-12">
           {/* Contact Info */}
           <div className="space-y-8">
-            <div className="flex items-center space-x-4 p-4 backdrop-blur-sm bg-white/10 rounded-xl border border-white/20 shadow-lg">
-              <div className="w-12 h-12 bg-gradient-to-r from-zed-orange to-zed-blue rounded-full flex items-center justify-center shadow-lg">
+            <div className="flex items-center space-x-4 p-4 glass-panel rounded-xl shadow-lg">
+              <div className="w-12 h-12 bg-gradient-to-r from-primary to-accent rounded-full flex items-center justify-center shadow-lg">
                 <Mail className="text-white" size={20} />
               </div>
               <div>
-                <h3 className="text-white font-semibold drop-shadow-lg">Email</h3>
-                <p className="text-white/80">subhancs57@gmail.com</p>
+                <h3 className="text-foreground font-semibold">Email</h3>
+                <p className="text-muted-foreground">subhancs57@gmail.com</p>
               </div>
             </div>
 
-            <div className="flex items-center space-x-4 p-4 backdrop-blur-sm bg-white/10 rounded-xl border border-white/20 shadow-lg">
-              <div className="w-12 h-12 bg-gradient-to-r from-zed-blue to-zed-orange rounded-full flex items-center justify-center shadow-lg">
+            <div className="flex items-center space-x-4 p-4 glass-panel rounded-xl shadow-lg">
+              <div className="w-12 h-12 bg-gradient-to-r from-primary to-accent rounded-full flex items-center justify-center shadow-lg">
                 <Linkedin className="text-white" size={20} />
               </div>
               <div>
-                <h3 className="text-white font-semibold drop-shadow-lg">LinkedIn</h3>
-                <p className="text-white/80">https://www.linkedin.com/in/muhammadsubhandev/</p>
+                <h3 className="text-foreground font-semibold">LinkedIn</h3>
+                <p className="text-muted-foreground">https://www.linkedin.com/in/muhammadsubhandev/</p>
               </div>
             </div>
 
-            <div className="flex items-center space-x-4 p-4 backdrop-blur-sm bg-white/10 rounded-xl border border-white/20 shadow-lg">
-              <div className="w-12 h-12 bg-gradient-to-r from-zed-orange to-zed-blue rounded-full flex items-center justify-center shadow-lg">
+            <div className="flex items-center space-x-4 p-4 glass-panel rounded-xl shadow-lg">
+              <div className="w-12 h-12 bg-gradient-to-r from-primary to-accent rounded-full flex items-center justify-center shadow-lg">
                 <Github className="text-white" size={20} />
               </div>
               <div>
-                <h3 className="text-white font-semibold drop-shadow-lg">GitHub</h3>
-                <p className="text-white/80">github.com/subhan513</p>
+                <h3 className="text-foreground font-semibold">GitHub</h3>
+                <p className="text-muted-foreground">github.com/subhan513</p>
               </div>
             </div>
           </div>
 
           {/* Contact Form */}
-          <div className="backdrop-blur-sm bg-white/10 rounded-2xl p-8 border border-white/20 shadow-xl">
+          <div className="glass-panel rounded-2xl p-8 shadow-xl">
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <Input
@@ -125,7 +125,7 @@ export const Contact = () => {
                   placeholder="Your Name"
                   value={formData.name}
                   onChange={handleChange}
-                  className="bg-white/20 border-white/30 text-white placeholder:text-white/60 focus:border-zed-blue backdrop-blur-sm"
+                  className="bg-background/60 border-border text-foreground placeholder:text-muted-foreground focus:border-primary"
                 />
               </div>
               
@@ -136,7 +136,7 @@ export const Contact = () => {
                   placeholder="Your Email"
                   value={formData.email}
                   onChange={handleChange}
-                  className="bg-white/20 border-white/30 text-white placeholder:text-white/60 focus:border-zed-blue backdrop-blur-sm"
+                  className="bg-background/60 border-border text-foreground placeholder:text-muted-foreground focus:border-primary"
                 />
               </div>
               
@@ -147,13 +147,13 @@ export const Contact = () => {
                   rows={5}
                   value={formData.message}
                   onChange={handleChange}
-                  className="bg-white/20 border-white/30 text-white placeholder:text-white/60 focus:border-zed-blue resize-none backdrop-blur-sm"
+                  className="bg-background/60 border-border text-foreground placeholder:text-muted-foreground focus:border-primary resize-none"
                 />
               </div>
               
               <Button
                 type="submit"
-                className="w-full bg-gradient-to-r from-zed-blue to-zed-orange hover:from-zed-orange hover:to-zed-blue text-white py-3 rounded-xl font-semibold transition-all duration-300 shadow-lg interactive-hover"
+                className="w-full bg-gradient-to-r from-primary to-accent hover:opacity-90 text-white py-3 rounded-xl font-semibold transition-all duration-300 shadow-lg interactive-hover"
               >
                 <Send size={20} className="mr-2" />
                 Send Message

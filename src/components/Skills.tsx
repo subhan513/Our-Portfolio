@@ -1,5 +1,5 @@
-import { FaReact, FaNodeJs, FaDatabase,FaMobileAlt,FaJs, FaCss3Alt, FaHtml5, FaGitAlt } from 'react-icons/fa';
-import { SiTailwindcss, SiMongodb, SiFirebase, SiExpress,SiSupabase, SiTypescript, SiJavascript } from 'react-icons/si';
+import { FaReact, FaNodeJs, FaGitAlt } from 'react-icons/fa';
+import { SiTailwindcss, SiMongodb, SiExpress, SiTypescript, SiJavascript } from 'react-icons/si';
 
 export const Skills = () => {
   const skills = [
@@ -17,14 +17,14 @@ export const Skills = () => {
     const IconComponent = skill.icon;
     
     return (
-      <div className="group flex flex-col items-center p-4 sm:p-6 backdrop-blur-sm bg-white/5 rounded-xl sm:rounded-2xl border border-white/10 shadow-xl hover:scale-105 sm:hover:scale-110 transition-all duration-300 hover:bg-white/10 min-w-[120px] sm:min-w-[140px]">
+      <div className="group flex flex-col items-center p-4 sm:p-6 glass-panel rounded-xl sm:rounded-2xl shadow-xl hover:scale-105 sm:hover:scale-110 transition-all duration-300 hover:bg-card/80 min-w-[120px] sm:min-w-[140px]">
         <div 
           className="mb-3 sm:mb-4 group-hover:scale-110 sm:group-hover:scale-125 transition-transform duration-300"
-          style={{ filter: 'drop-shadow(0 0 10px rgba(34, 211, 238, 0.5))' }}
+          style={{ filter: 'drop-shadow(0 0 8px rgba(59, 130, 246, 0.35))' }}
         >
-          <IconComponent size={32} className="text-cyan-400 sm:text-5xl sm:w-12 sm:h-12" />
+          <IconComponent size={32} className="text-primary sm:text-5xl sm:w-12 sm:h-12" />
         </div>
-        <h3 className="text-white font-bold text-sm sm:text-lg text-center leading-tight">{skill.name}</h3>
+        <h3 className="text-foreground font-bold text-sm sm:text-lg text-center leading-tight">{skill.name}</h3>
       </div>
     );
   };
@@ -49,10 +49,10 @@ export const Skills = () => {
 
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="text-center mb-12 sm:mb-16 animate-fade-in">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-3 sm:mb-4 drop-shadow-lg">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-3 sm:mb-4">
             Skills & Expertise
           </h2>
-          <p className="text-lg sm:text-xl text-white/80 drop-shadow-lg px-4">
+          <p className="text-lg sm:text-xl text-muted-foreground px-4">
             Technologies I master to build scalable, modern applications
           </p>
         </div>

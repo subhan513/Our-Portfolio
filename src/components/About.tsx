@@ -21,39 +21,39 @@ export const About = () => {
       <div className="max-w-6xl mx-auto relative z-10">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-8 drop-shadow-lg">
+            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-8">
               About Me
             </h2>
             
             <div className="space-y-6">
-              <p className="text-white/90 text-lg leading-relaxed drop-shadow-lg">
+              <p className="text-muted-foreground text-lg leading-relaxed">
                 I'm a passionate full-stack developer with 2 years of experience in building 
                 modern web applications. I specialize in React, Node.js, and cloud technologies, 
                 helping businesses transform their ideas into powerful digital solutions.
               </p>
               
-              <p className="text-white/80 leading-relaxed drop-shadow-lg">
+              <p className="text-muted-foreground leading-relaxed">
                 My journey in web development started with a curiosity about how websites work, 
                 and it has evolved into a career dedicated to creating exceptional user experiences 
                 and robust backend systems.
               </p>
 
               <div className="grid grid-cols-2 gap-6 mt-8">
-                <div className="text-center backdrop-blur-sm bg-white/10 rounded-lg p-4">
-                  <div className="text-3xl font-bold text-zed-orange mb-2 drop-shadow-lg">5+</div>
-                  <div className="text-white/80">Projects Completed</div>
+                <div className="text-center glass-panel rounded-lg p-4">
+                  <div className="text-3xl font-bold text-primary mb-2">5+</div>
+                  <div className="text-muted-foreground">Projects Completed</div>
                 </div>
-                <div className="text-center backdrop-blur-sm bg-white/10 rounded-lg p-4">
-                  <div className="text-3xl font-bold text-zed-blue mb-2 drop-shadow-lg">2+</div>
-                  <div className="text-white/80">Years Experience</div>
+                <div className="text-center glass-panel rounded-lg p-4">
+                  <div className="text-3xl font-bold text-primary mb-2">2+</div>
+                  <div className="text-muted-foreground">Years Experience</div>
                 </div>
-                <div className="text-center backdrop-blur-sm bg-white/10 rounded-lg p-4">
-                  <div className="text-3xl font-bold text-zed-orange mb-2 drop-shadow-lg">1+</div>
-                  <div className="text-white/80">Happy Clients</div>
+                <div className="text-center glass-panel rounded-lg p-4">
+                  <div className="text-3xl font-bold text-primary mb-2">1+</div>
+                  <div className="text-muted-foreground">Happy Clients</div>
                 </div>
-                <div className="text-center backdrop-blur-sm bg-white/10 rounded-lg p-4">
-                  <div className="text-3xl font-bold text-zed-blue mb-2 drop-shadow-lg">6+</div>
-                  <div className="text-white/80">Technologies</div>
+                <div className="text-center glass-panel rounded-lg p-4">
+                  <div className="text-3xl font-bold text-primary mb-2">6+</div>
+                  <div className="text-muted-foreground">Technologies</div>
                 </div>
               </div>
             </div>
@@ -61,7 +61,7 @@ export const About = () => {
 
           <div className="flex justify-center">
             <div className="relative">
-              <div className="w-80 h-80 backdrop-blur-sm bg-white/10 rounded-2xl flex items-center justify-center border border-white/20 shadow-2xl">
+              <div className="w-80 h-80 glass-panel rounded-2xl flex items-center justify-center shadow-2xl">
                 <div className="text-center">
                   <div className="w-40 h-40 mx-auto mb-4 rounded-2xl overflow-hidden shadow-lg border-4 border-gradient-to-br from-zed-orange to-zed-blue">
                     <img 
@@ -70,15 +70,15 @@ export const About = () => {
                       className="w-full h-full"
                     />
                   </div>
-                  <p className="text-white/90 text-sm font-semibold">MernStack Developer</p>
+                  <p className="text-foreground/90 text-sm font-semibold">MernStack Developer</p>
                 </div>
               </div>
               
               {/* Floating elements */}
-              <div className="absolute -top-4 -right-4 w-16 h-16 bg-gradient-to-r from-zed-blue to-zed-orange rounded-full flex items-center justify-center animate-bounce shadow-lg">
+              <div className="absolute -top-4 -right-4 w-16 h-16 bg-gradient-to-r from-primary to-accent rounded-full flex items-center justify-center animate-bounce shadow-lg">
                 <span className="text-white font-bold text-sm">Reactjs</span>
               </div>
-              <div className="absolute -bottom-4 -left-4 w-12 h-12 bg-gradient-to-r from-zed-orange to-zed-blue rounded-full flex items-center justify-center animate-bounce shadow-lg" style={{ animationDelay: '0.5s' }}>
+              <div className="absolute -bottom-4 -left-4 w-12 h-12 bg-gradient-to-r from-accent to-primary rounded-full flex items-center justify-center animate-bounce shadow-lg" style={{ animationDelay: '0.5s' }}>
                 <span className="text-white text-sm font-bold">Nodejs</span>
               </div>
             </div>

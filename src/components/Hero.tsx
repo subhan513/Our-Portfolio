@@ -6,7 +6,6 @@ const stats = [
   { label: "Projects Completed", value: "8+", bg: "bg-accent/20", color: "text-primary", delay: "0.4s" },
   { label: "Happy Clients", value: "1+", bg: "bg-primary/20", color: "text-accent", delay: "0.6s" },
   { label: "Problems Solved", value: "120+", bg: "bg-accent/20", color: "text-primary", delay: "0.8s" },
-  { label: "Passionate", value: "💡", bg: "bg-primary/20", color: "text-accent", delay: "1s" },
 ];
 
 export const Hero = () => {
@@ -25,7 +24,7 @@ export const Hero = () => {
               <span className="text-foreground">I am a MERN Stack Developer</span>
             </h1>
             <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground leading-relaxed max-w-4xl mx-auto">
-              I build scalable, secure, and user-friendly web apps. Passionate about problem solving, I’ve solved 90+ coding challenges and delivered 8+ projects.
+              I build scalable, secure, and user-friendly web apps. Passionate about problem solving, I’ve solved 130+ LeetCode coding challenges and delivered 8+ projects.
             </p>
           </div>
 
